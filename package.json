@@ -1,0 +1,10 @@
+{
+    "name": "com.ivories-studios.utils-collection",
+    "version": "1.0.0",
+    "displayName": "Ivories Studios Utils Collection",
+    "description": "Collection of various utils scripts",
+    "author": {
+        "name": "Ivories Studios",
+        "email": "ivories.studios@gmail.com"
+    }
+}
