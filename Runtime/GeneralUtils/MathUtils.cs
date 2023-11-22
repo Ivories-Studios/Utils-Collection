@@ -42,4 +42,9 @@ public static class MathUtils
     {
         return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
+
+    public static (float, float) Shear(float t, float ft, float a, float b, float c, float d)
+    {
+        return (a * t + b * ft, c * t + d * ft);
+    }
 }
