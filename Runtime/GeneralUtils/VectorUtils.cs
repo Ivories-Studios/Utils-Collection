@@ -2,6 +2,16 @@ using UnityEngine;
 
 public static class VectorUtils
 {
+    public static bool Approximately(Vector3 v, Vector3 other, float tolerance = 1e-4f)
+    {
+        return Vector3.SqrMagnitude(v - other) <= tolerance * tolerance;
+    }
+
+    public static bool Approximately(Vector2 v, Vector2 other, float tolerance = 1e-4f)
+    {
+        return Vector2.SqrMagnitude(v - other) <= tolerance * tolerance;
+    }
+
     public static Vector3 ToFlatVector3(this Vector2 v)
     {
         return new Vector3(v.x, 0, v.y);
@@ -12,7 +22,7 @@ public static class VectorUtils
         return new Vector3(v.x, 0, v.z);
     }
 
-    public static float FlatDistance(this Vector3 origin, Vector3 destination)
+    public static float FlatDistance(Vector3 origin, Vector3 destination)
     {
         return Vector3.Distance(origin.Flatten(), destination.Flatten());
     }
